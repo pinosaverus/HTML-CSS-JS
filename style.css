@@ -1,0 +1,382 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100%;
+  background-color: #ebe6d9;
+  background-image:
+    radial-gradient(ellipse at 12% 8%, #a9b99a55, transparent 30%),
+    radial-gradient(ellipse at 88% 32%, #d5b69a44, transparent 27%),
+    repeating-linear-gradient(135deg, #ffffff12 0 1px, transparent 1px 7px);
+}
+
+body {
+  max-width: 960px;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 32px 24px;
+  background:
+    radial-gradient(ellipse at 50% 0, #ffffffaa, transparent 65%),
+    repeating-linear-gradient(0deg, #ffffff10 0 1px, transparent 1px 5px),
+    #f5f1e9;
+  color: #30392f;
+  font-family: Georgia, "Times New Roman", serif;
+  line-height: 1.7;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 18px 24px;
+  border: 1px solid #e4ddcf;
+  border-bottom: 3px solid #60745c;
+  border-radius: 12px 12px 3px 3px;
+  background:
+    radial-gradient(ellipse at 100% 0, #dce5d366, transparent 45%),
+    repeating-linear-gradient(135deg, #526b4c08 0 1px, transparent 1px 8px),
+    #fffdf8;
+  box-shadow: 0 8px 22px #41351c12;
+}
+
+header h1 {
+  margin: 0;
+  color: #526b4c;
+  font-size: 28px;
+}
+
+nav {
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+}
+
+nav a {
+  margin: 0 5px;
+  padding: 7px 10px;
+  border-radius: 20px;
+  color: #526b4c;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 180ms ease, color 180ms ease;
+}
+
+nav a:hover {
+  background: #e9eee4;
+  color: #354c36;
+}
+
+header hr,
+main + footer hr {
+  display: none;
+}
+
+main {
+  padding: 26px 0;
+}
+
+section {
+  margin: 0 0 22px;
+  padding: 24px 28px;
+  border: 1px solid #e4ddcf;
+  border-radius: 10px;
+  background:
+    radial-gradient(ellipse at 100% 0, #e9eee455, transparent 38%),
+    repeating-linear-gradient(0deg, #526b4c06 0 1px, transparent 1px 6px),
+    #fffdf8;
+  box-shadow: 0 5px 16px #41351c12;
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+section:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px #41351c1c;
+}
+
+#tentang {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 220px;
+  align-items: center;
+  gap: 24px;
+}
+
+#tentang h2 {
+  grid-column: 1;
+  grid-row: 1;
+  align-self: end;
+  margin: 0;
+  color: #354c36;
+  font-size: 30px;
+  line-height: 1.25;
+}
+
+#tentang p {
+  grid-column: 1;
+  margin: 0;
+}
+
+#tentang p:first-of-type {
+  align-self: end;
+  color: #a05b3c;
+}
+
+#tentang figure {
+  grid-column: 2;
+  grid-row: 1 / span 3;
+  margin: 0;
+  text-align: center;
+}
+
+#tentang img {
+  display: block;
+  width: 190px;
+  height: 190px;
+  margin: 0 auto 8px;
+  border: 6px solid #e5eadc;
+  border-radius: 18px 18px 52px 18px;
+  box-shadow: 0 8px 18px #354c3626;
+  object-fit: cover;
+}
+
+figcaption {
+  color: #737a6e;
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+}
+
+section h2 {
+  margin: 0 0 12px;
+  color: #526b4c;
+  font-size: 23px;
+}
+
+#kesukaan ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 28px;
+  margin: 0;
+  padding-left: 22px;
+}
+
+#info table {
+  width: 100%;
+  border: 0;
+  border-collapse: collapse;
+  font-family: Arial, sans-serif;
+}
+
+#info th,
+#info td {
+  padding: 11px 14px;
+  border: 0;
+  border-bottom: 1px solid #e8e2d7;
+  text-align: left;
+}
+
+#info tr:last-child th,
+#info tr:last-child td {
+  border-bottom: 0;
+}
+
+#info th {
+  width: 32%;
+  color: #526b4c;
+  background:
+    repeating-linear-gradient(135deg, #526b4c08 0 1px, transparent 1px 6px),
+    #f3f4eb;
+}
+
+footer {
+  padding: 8px 0;
+  color: #737a6e;
+  font-size: 14px;
+  text-align: center;
+}
+
+.js-output {
+  margin-top: 12px;
+  padding: 12px 16px;
+  border: 1px solid #e4ddcf;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.55);
+  color: #354c36;
+  font-family: Arial, sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.js-output p {
+  margin: 0 0 8px;
+}
+
+.js-output p:last-child {
+  margin-bottom: 0;
+}
+
+#choiceForm {
+  display: grid;
+  gap: 16px;
+  font-family: Arial, sans-serif;
+}
+
+.form-field {
+  display: grid;
+  gap: 6px;
+}
+
+.form-field > label,
+.option-input-row > label,
+.preview-group h3 {
+  color: #526b4c;
+  font-weight: 700;
+}
+
+#choiceForm input[type="text"],
+#choiceForm input[type="number"],
+#previewContainer select {
+  width: 100%;
+  min-height: 42px;
+  padding: 9px 11px;
+  border: 1px solid #cfc8b9;
+  border-radius: 6px;
+  background: #fffefa;
+  color: #30392f;
+  font: inherit;
+}
+
+#choiceForm input:focus,
+#previewContainer select:focus {
+  outline: 3px solid #526b4c33;
+  border-color: #526b4c;
+}
+
+#choiceForm button {
+  justify-self: start;
+  min-height: 42px;
+  padding: 9px 16px;
+  border: 1px solid #526b4c;
+  border-radius: 6px;
+  background: #526b4c;
+  color: #fffdf8;
+  font: 700 14px Arial, sans-serif;
+  cursor: pointer;
+}
+
+#choiceForm button:hover {
+  background: #354c36;
+}
+
+#choiceForm .secondary-button {
+  background: #fffdf8;
+  color: #354c36;
+}
+
+#choiceForm .secondary-button:hover {
+  background: #e9eee4;
+}
+
+.option-inputs,
+.preview-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 14px;
+}
+
+.option-input-row {
+  display: grid;
+  gap: 6px;
+}
+
+.preview-group {
+  min-width: 0;
+  padding: 14px;
+  border: 1px solid #e4ddcf;
+  border-radius: 6px;
+  background: #fffefa;
+}
+
+.preview-group h3 {
+  margin: 0 0 10px;
+  font-size: 15px;
+}
+
+.choice-list {
+  display: grid;
+  gap: 8px;
+}
+
+.choice-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  overflow-wrap: anywhere;
+}
+
+.error-message {
+  min-height: 1em;
+  color: #a33e32;
+  font-size: 13px;
+}
+
+#output[hidden] {
+  display: none;
+}
+
+#output {
+  margin-top: 18px;
+  overflow-wrap: anywhere;
+}
+
+footer p {
+  margin: 0;
+}
+
+@media (max-width: 620px) {
+  body {
+    padding: 16px 14px;
+  }
+
+  header {
+    flex-direction: column;
+    gap: 8px;
+    padding: 16px;
+  }
+
+  #tentang {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  #tentang h2,
+  #tentang p,
+  #tentang figure {
+    grid-column: 1;
+    grid-row: auto;
+  }
+
+  #tentang figure {
+    grid-row: 1;
+  }
+
+  #kesukaan ul {
+    display: block;
+  }
+
+  section {
+    padding: 20px;
+  }
+
+  #choiceForm button {
+    width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}

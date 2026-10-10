@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kenalan dengan Pino Saverus</title>
+    <link rel="stylesheet" href="style.css" />
+
+  </head>
+
+  <body>
+    <header>
+      <h1>Pino Saverus</h1>
+      <nav aria-label="Navigasi utama">
+        <a href="#tentang">Tentang</a> |
+        <a href="#kesukaan">Kesukaan</a> |
+        <a href="#info">Info singkat</a>
+      </nav>
+      <hr />
+    </header>
+
+    <main>
+      <section id="tentang">
+        <h2>Halo, saya Pino Saverus</h2>
+        <p>
+          <strong>Mahasiswa Informatika</strong> di Universitas Sanata Dharma yang
+          senang mengubah rasa penasaran menjadi karya nyata.
+        </p>
+        <p>
+          Saya biasa dipanggil Pino dan saat ini sedang menempuh semester 3. Bagi
+          saya, setiap baris kode adalah kesempatan untuk belajar hal baru, dan
+          lewat halaman ini saya ingin memperkenalkan diri. Selamat datang dan
+          semoga kita bisa saling mengenal!
+        </p>
+        <figure>
+          <img src="foto_profil.jpg" alt="Foto Pino Saverus" width="200" />
+          <figcaption>Foto profil Pino</figcaption>
+        </figure>
+      </section>
+
+      <hr />
+
+      <section id="kesukaan">
+        <h2>Hal yang saya sukai</h2>
+        <ul>
+          <li>Nonton Film</li>
+          <li>Basket</li>
+          <li>Bermain Alat Musik</li>
+        </ul>
+      </section>
+
+      <section id="info">
+        <h2>Info singkat</h2>
+        <table border="1">
+          <tbody>
+            <tr>
+              <th scope="row">Nama</th>
+              <td>Pino Saverus</td>
+            </tr>
+            <tr>
+              <th scope="row">Kampus</th>
+              <td>Universitas Sanata Dharma</td>
+            </tr>
+            <tr>
+              <th scope="row">Jurusan</th>
+              <td>Informatika</td>
+            </tr>
+            <tr>
+              <th scope="row">Semester</th>
+              <td>3</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section id="form-pilihan">
+        <h2>Form Pilihan Dinamis</h2>
+        <form id="choiceForm" novalidate>
+          <div class="form-field">
+            <label for="nama">Nama</label>
+            <input id="nama" name="nama" type="text" placeholder="Masukkan nama" required />
+            <small class="error-message" id="namaError" aria-live="polite"></small>
+          </div>
+
+          <div class="form-field">
+            <label for="jumlahPilihan">Jumlah pilihan</label>
+            <input id="jumlahPilihan" name="jumlahPilihan" type="number" min="1" step="1" value="3" required />
+            <small class="error-message" id="jumlahError" aria-live="polite"></small>
+          </div>
+
+          <div class="form-field">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="text" inputmode="email" autocomplete="email" placeholder="nama@contoh.com" required />
+            <small class="error-message" id="emailError" aria-live="polite"></small>
+          </div>
+
+          <button id="buatOpsi" type="button">Buat kolom pilihan</button>
+          <div id="opsiContainer" class="option-inputs"></div>
+
+          <button id="tampilkanOpsi" type="button" class="secondary-button">Tampilkan pilihan</button>
+          <div id="previewContainer" class="preview-grid" aria-live="polite"></div>
+
+          <button type="submit">Tampilkan output</button>
+        </form>
+        <div id="output" class="js-output" aria-live="polite" hidden></div>
+      </section>
+    </main>
+
+    <footer>
+      <hr />
+      <p>Terima kasih sudah berkunjung!</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
